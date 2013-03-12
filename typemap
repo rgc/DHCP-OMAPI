@@ -1,0 +1,13 @@
+TYPEMAP
+
+dhcpctl_handle		* T_dhcpctl_handle
+
+INPUT
+
+T_dhcpctl_handle
+	$var = sv2dhcpctl_handle($arg)
+
+OUTPUT
+
+T_dhcpctl_handle
+	sv_setref_pv($arg, \"DHCP::OMAPI::Handle\", (void *)$var);
